@@ -1,0 +1,15 @@
+[31m[1mCMake Error[0m at /usr/share/catkin/cmake/catkinConfig.cmake:82 (find_package):
+  Could not find a package configuration file provided by "roslib" with any
+  of the following names:
+
+    roslibConfig.cmake
+    roslib-config.cmake
+
+  Add the installation prefix of "roslib" to CMAKE_PREFIX_PATH or set
+  "roslib_DIR" to a directory containing one of the above files.  If "roslib"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+[36mCall Stack (most recent call first):[0m
+  CMakeLists.txt:22 (find_package)
+
+

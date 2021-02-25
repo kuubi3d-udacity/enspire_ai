@@ -1,0 +1,1 @@
+/home/kuubi/ai/enspiregit/enspire-ai/faith/science/kitty_hawk/ws_plotjuggler/devel/.private/catkin_tools_prebuild/setup.zsh
