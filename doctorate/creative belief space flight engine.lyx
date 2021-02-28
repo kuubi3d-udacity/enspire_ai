@@ -467,22 +467,22 @@ IEEEPARstart
 \end_layout
 
 \begin_layout Standard
-This paper explores the application of underactuated plan-ning and control
+This paper explores the application of underactuated planning and control
  approaches to the belief space planningproblem.
- Belief state dynamics are underactuated becausethe number of controlled
- dimensions (the parameters of aprobability distribution) exceeds the number
+ Belief state dynamics are underactuated because the number of controlled
+ dimensions (the parameters of a probability distribution) exceeds the number
  of independentcontrol inputs.
- As a result, the dynamics are constrained ina way that can make planning
+ As a result, the dynamics are constrained in a way that can make planning
  difficult.
- Our contributionis to recast the belief space planning problem in such
+ Our contribution is to recast the belief space planning problem in such
  away that conventional planning and control techniques areapplicable.
  As a result, we are able to find belief spacepolicies using linear quadratic
- regulation (LQR) and locallyoptimal belief space trajectories using direct
+ regulation (LQR) and locally optimal belief space trajectories using direct
  transcription.
- Weprovide theoretical results characterizing the effectiveness ofa plan-and-rep
+ We provide theoretical results characterizing the effectiveness of a plan-and-rep
 lan strategy.
- Finally, we show that the approachproduces interesting and relevant behaviors
- on a simple graspproblem where it is necessary to acquire information beforeact
+ Finally, we show that the approach produces interesting and relevant behaviors
+ on a simple grasp problem where it is necessary to acquire information before act
 ing.
 \end_layout
 
