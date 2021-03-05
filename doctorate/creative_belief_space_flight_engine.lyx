@@ -479,15 +479,132 @@ This paper explores the application of underactuated planning and control
  As a result, we are able to find belief spacepolicies using linear quadratic
  regulation (LQR) and locally optimal belief space trajectories using direct
  transcription.
- We provide theoretical results characterizing the effectiveness of a plan-and-rep
-lan strategy.
+ We provide theoretical results characterizing the effectiveness of a plan-and-r
+eplan strategy.
  Finally, we show that the approach produces interesting and relevant behaviors
- on a simple grasp problem where it is necessary to acquire information before act
-ing.
+ on a simple grasp problem where it is necessary to acquire information
+ before acting.
 \end_layout
 
 \begin_layout Standard
 ACKNOWLEDGEMENTS
+\end_layout
+
+\begin_layout Standard
+
+\color green
+Where POMDPs have been intractable to optimize exactly pricncipled approximation
+ methods can be devised based on Bellmans principle.
+\end_layout
+
+\begin_layout Standard
+
+\color teal
+US 2018 / 0311819 A1 Nov .
+ 1 , 2018[ 0157 ] The data association aware belief space planning ( DA
+ - BSP ) approach relaxes the assumption that data - asso ciation is certain
+ .
+ In the passive approach with observations provided , DA - BSP results in
+ a more robust inference .
+ In the active approach whereby planning considers possible future observations
+ .
+ DA - BSP provides better action selection such that bad inferences and
+ actions leading to ambiguities are avoided .
+ DA - BSP is a more faithful representation of an aliased environment because
+ the number of components can increase as well as decrease .
+ f0158 ] It is to be understood that the following claims are intended to
+ cover all of the generic and specific features of the invention herein
+ described and all statements of the scope of the invention which , as a
+ matter of language , might be said to fall there between What is claimed
+ : 1 .
+ A method implemented by a robot in a perceptually aliased environment ,
+ wherein the robot comprises at least one sensor and a programmed task ,
+ wherein performing the programmed task includes implementing one or more
+ of a set of control actions , wherein the set of control actions includes
+ a first control action , and wherein each control action changes a pose
+ of the robot , the method comprising : inferring , from a scene observed
+ by the sensor , while the robot is at a first pose , a probability distribution
+ func tion ( pdf ) of the first pose , wherein the scene is one alias of
+ a plurality of aliased scenes , such that the first pose pdf is a first
+ mixture pdf , including a component pdf for each of the plurality of aliased
+ scenes ; planning an optimal control action by : determining a second mixture
+ pdf of a simulated pose of the robot , by simulating an application of
+ the first control action to the first mixture pdf ; determining from the
+ second mixture pdf a range of possible observations ; calculat ing scene
+ probabilities for associating each possible observation with each aliased
+ scene of a set of aliased 13 scenes ; calculating from the scene probabilities
+ an objective function to determine an estimated cost of the first control
+ action ; comparing the estimated cost of the first control action with
+ estimated costs calculated for one or more additional control actions ,
+ to determine an optimal control action , and executing the optimal control
+ action to put the robot at a new pose .
+ 2 .
+ The method of claim 1 , further comprising making a new observation from
+ the new pose and determining , from the new observation , a new pdf of
+ the new pose of the robot .
+ 3 .
+ The method of claim 2 , wherein determining the new pdf comprises determining
+ that an observed new scene is a singular scene having no aliases , resulting
+ in disambiguation such that the new pdf includes only one pdf component
+ corresponding to the singular scene .
+ 4 .
+ The method of claim 1 , wherein calculating the objec tive function from
+ the scene probabilities comprises calcu lating from the scene probabilities
+ , for each possible obser vation of the range of possible observations
+ a likelihood weight , and applying the likelihood weight to the objective
+ function .
+ 5 .
+ The method of claim 1 , wherein calculating the objec tive function comprises
+ integrating a product of two factors over all observations in the range
+ of possible observations , wherein a first factor represents a likelihood
+ of a given observation , given a history of actions and the first control
+ action , and wherein the second factor corresponds to a probability of
+ the second mixture pdf , given the history and the given observation .
+ 6 .
+ The method of claim 1 , wherein the possible observa tions are generated
+ by sampling viewpoints from the second mixed pdf and associating the sampled
+ viewpoints with respective observed scenes according to a mapping of the
+ environment .
+ 7 .
+ The method of claim 1 , wherein the simulated obser vations , made from
+ the possible poses , are determined by a predefined event likelihood relationsh
+ip .
+ 8 .
+ The method of claim 1 , wherein the cost function is based on a Kullback
+ - Leibler ( KL ) divergence with respect to the likelihood weights .
+ 9 .
+ The method of claim 1 , wherein the planning is a multi - stage planning
+ process , wherein the second mixture pdf is generated by simulating a sequence
+ of control actions , and wherein the optimal control action is the control
+ action initiating an optimal sequence of control actions .
+ 10 .
+ The method of claim 1 , wherein the scene probabili ties are pruned by
+ comparing each scene probability with a predefined weight threshold , to
+ remove scene probabilities having negligible probabilities .
+ 11 .
+ A robotic system for navigating a perceptually aliased environment , comprising
+ a robot having at least one sensor and a programmed task , wherein performing
+ the pro grammed task includes implementing one or more of a set of control
+ actions , wherein the set of control actions includes a first control action
+ , and wherein each control action changes a pose of the robot , wherein
+ the robot includes a processor and a memory with instructions that when
+ executed by the processor cause the robot to perform the steps of : inferring
+ , from a scene observed by the sensor , while the robot is at a first pose
+ , a probability distribution func tion ( pdf ) of the first pose , wherein
+ the scene is one alias of a plurality of aliased scenes , such that the
+ first pose pdf is a first mixture pdf , including a component pdf for each
+ of the plurality of aliased scenes ; planning an optimal control action
+ by : determining a second mixture pdf of a simulated pose of the robot
+ by simulating an application of the first control action to the first mixture
+ pdf ; determining from the second mixture pdf a range of possible observations
+ ; calculat ing scene probabilities for associating each possible observation
+ with each aliased scene of a set of aliased scenes ; calculating from the
+ scene probabilities an objective function to determine an estimated cost
+ of the first control action ; comparing the estimated cost of the first
+ control action with estimated costs calculated for one or more additional
+ control actions to determine an optimal control action ; and executing
+ the optimal control action to put the robot at a new pose .
+ 
 \end_layout
 
 \begin_layout Section
